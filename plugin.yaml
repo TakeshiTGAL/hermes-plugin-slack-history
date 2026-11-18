@@ -1,0 +1,25 @@
+manifest_version: 2
+name: slack-history
+label: Slack History
+kind: standalone
+version: 0.1.0
+requires_hermes: ">=0.21.4"
+description: >
+  Read the current Slack channel or thread with the existing bot token
+  and return the messages so they can be summarized.
+author: TakeshiTGAL
+license: MIT
+homepage: https://github.com/TakeshiTGAL/hermes-plugin-slack-history
+tags: [slack, history]
+platforms:
+  - linux
+  - macos
+provides_tools:
+  - slack_history
+provides_hooks: []
+python_dependencies: []
+config_schema:
+  extra_channels:
+    type: list
+    default: []
+    description: Channel ids this plugin may read besides the current channel. Empty means the current channel or thread only.
